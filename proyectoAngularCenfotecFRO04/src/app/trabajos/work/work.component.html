@@ -1,0 +1,31 @@
+<!-- Sección portafolio -->
+<section class="portafolio paddingHelper section" id="portafolio">
+  <h3 class="tagSeccion">Trabajos</h3>
+  <div class="portafolio--filter">
+    <a href="#" class="active">Web</a>
+    <a href="#">Desktop</a>
+    <a href="#">React</a>
+  </div>
+
+  <!-- <h2>Portafolio</h2> -->
+  <div class="works--container">
+    <article class="work" *ngFor="let trabajo of listaTrabajos">
+      <div class="work--image">
+        <img src="../../../assets/image/trabajos/{{ trabajo.id }}.jpg" alt="" />
+      </div>
+
+      <div class="work--info">
+        <p>Tipo</p>
+        <h2>{{ trabajo.title }}</h2>
+      </div>
+      <i class="fa fa-info-circle work--info-button" id=""></i>
+      <div class="work--details">
+        <h3>Detalles</h3>
+        <p>
+          {{ trabajo.desc }}
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- Fin Sección portafolio -->

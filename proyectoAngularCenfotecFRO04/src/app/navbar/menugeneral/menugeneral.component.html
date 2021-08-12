@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <a href="#" class="navbar--logo">
+    <img
+      src="../../../assets/image/logo/logoBlanco.svg"
+      alt="Logo con la inscripción Braseth desarrollador web"
+  /></a>
+  <ul id="navbar--list" [ngClass]="{ show: claseVisible }" class="navbar--list">
+    <li *ngFor="let elemento of elementos" class="navbar--list--item">
+      <a routerLink="{{ elemento }}" class="navbar--list--item-link">{{
+        elemento
+      }}</a>
+    </li>
+  </ul>
+  <button class="navbar--button" id="navbar--button" (click)="toogleNav()">
+    <i class="bx bx-menu" id="toggle-icon"></i>
+  </button>
+</nav>

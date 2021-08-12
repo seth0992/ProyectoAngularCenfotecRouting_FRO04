@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.paddingHelper {
+  padding-left: calc((100vw - min(90vw, 120ch)) / 2);
+  padding-right: calc((100vw - min(90vw, 120ch)) / 2);
+}
+
+.tagSeccion {
+  background-color: #023047;
+  width: 200px;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  border-radius: 45px;
+  color: #f0eff4;
+  font-weight: 700;
+}

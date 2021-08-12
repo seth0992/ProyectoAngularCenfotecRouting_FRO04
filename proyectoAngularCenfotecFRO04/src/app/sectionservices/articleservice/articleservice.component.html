@@ -1,0 +1,23 @@
+<section class="services paddingHelper section" id="services">
+  <h2 class="tagSeccion">Servicios</h2>
+
+  <div class="service--container">
+    <!-- servicio 1 -->
+
+    <article class="service--item" *ngFor="let servicio of listaServicios">
+      <p>{{ servicio.id }}</p>
+      <h3>{{ servicio.title }}</h3>
+      <p>
+        {{ servicio.desc }}
+      </p>
+
+      <div class="service--item-icon">
+        <img
+          src="../../../assets/image/iconos/structure.png"
+          alt="Icono React"
+        />
+      </div>
+    </article>
+  </div>
+</section>
+<!-- Fin Sección servicios -->
