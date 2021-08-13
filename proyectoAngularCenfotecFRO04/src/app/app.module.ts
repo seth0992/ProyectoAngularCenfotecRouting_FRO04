@@ -12,21 +12,29 @@ import { ArticleserviceComponent } from './sectionservices/articleservice/articl
 import { WorkComponent } from './trabajos/work/work.component';
 import { SectionservicesModule } from './sectionservices/sectionservices.module';
 import { TrabajosModule } from './trabajos/trabajos.module';
+import { NoencontradoComponent } from './noencontrado/noencontrado.component';
+import { ContactoModule } from './contacto/contacto.module';
+import { ContactoComponent } from './contacto/contacto/contacto.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent
-    ,MenugeneralComponent,
+    ,MenugeneralComponent, NoencontradoComponent, 
     // BannerComponent,
     // PerfilComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,AppRoutingModule,
-    SectionservicesModule,TrabajosModule
+    AppRoutingModule,
+    HttpClientModule,
+    AppRoutingModule,
+    SectionservicesModule,
+    TrabajosModule,
+    ContactoModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactoComponent } from './contacto/contacto/contacto.component';
 import { BannerComponent } from './hero-banner/banner/banner.component';
+import { NoencontradoComponent } from './noencontrado/noencontrado.component';
 import { PerfilComponent } from './perfilpersonal/perfil/perfil.component';
 import { ArticleserviceComponent } from './sectionservices/articleservice/articleservice.component';
 import { WorkComponent } from './trabajos/work/work.component';
@@ -10,7 +12,9 @@ const routes: Routes = [
   {path: "Inicio", component:BannerComponent},
   {path:"Acerca", component:PerfilComponent},
   {path:"Servicios", component:ArticleserviceComponent},
-  {path:"Portafolio", component:WorkComponent}
+  {path:"Portafolio", component:WorkComponent},
+  {path:"Contáctenos", component:ContactoComponent},
+  {path:"**", component:NoencontradoComponent}
 
 ];
 

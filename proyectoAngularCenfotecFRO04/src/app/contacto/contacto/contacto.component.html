@@ -1,1 +1,88 @@
-<p>contacto works!</p>
+<!-- Sección Contácteme -->
+<section class="contact paddingHelper section" id="contact">
+  <h3 class="tagSeccion">Contácteme</h3>
+  <form
+    class="contact--form"
+    (ngSubmit)="onSubmit(contactoForm)"
+    #contactoForm="ngForm"
+    novalidate=""
+  >
+    <div class="content-input">
+      <label for="name" class="label">Nombre Completo</label>
+      <input
+        class="input--form"
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre Completo"
+        [(ngModel)]="miContacto.nombre"
+        #nombre="ngModel"
+      />
+      <div
+        [hidden]="nombre.valid || nombre.pristine"
+        class="alert alert-danger"
+      ></div>
+    </div>
+
+    <div class="content-input">
+      <label for="mail" class="label">Correo Electronico</label>
+      <input
+        class="input--form"
+        type="email"
+        name="correoelectronico"
+        id="correoelectronico"
+        placeholder="Email"
+        [(ngModel)]="miContacto.correoelectronico"
+        #correoelectronico="ngModel"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+      />
+      <div
+        [hidden]="correoelectronico.valid || correoelectronico.pristine"
+        class="alert alert-danger"
+      >
+        <div *ngIf="correoelectronico.errors?.pattern">
+          El correo electrónico es incorrecto. Debe contener @ y .
+        </div>
+      </div>
+    </div>
+    <div class="content-input">
+      <label for="phone" class="label">Numero Telefono</label>
+      <input
+        class="input--form"
+        type="tel"
+        name="telefono"
+        id="telefono"
+        placeholder="Telefono"
+        [(ngModel)]="miContacto.telefono"
+        #telefono="ngModel"
+      />
+    </div>
+    <div class="content-input">
+      <label for="type" class="label">Motivo</label>
+      <select name="type" id="type" class="input--form">
+        <option value="">Seleccione una opción</option>
+        <option value="1">Contratar</option>
+        <option value="2">Freelance</option>
+      </select>
+    </div>
+
+    <div class="content-textarea">
+      <label for="message" class="label">Tu Mensaje</label>
+      <textarea
+        class="input--form"
+        name="mensaje"
+        id="mensaje"
+        placeholder="Mensaje"
+        rows="8"
+        [(ngModel)]="miContacto.mensaje"
+        #mensaje="ngModel"
+      ></textarea>
+    </div>
+
+    <div class="content-button">
+      <!-- <button type="button">Enviar</button> -->
+      <button type="button" (click)="contactoForm.reset()">Resetear</button>
+      <button type="button" (click)="nuevoContacto()">Enviar</button>
+    </div>
+  </form>
+</section>
