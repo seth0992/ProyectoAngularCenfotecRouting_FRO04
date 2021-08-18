@@ -1,0 +1,367 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.paddingHelper {
+  padding-left: calc((100vw - min(90vw, 140ch)) / 2);
+  padding-right: calc((100vw - min(90vw, 140ch)) / 2);
+}
+
+.header {
+  background-color: #110503;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  display: flex;
+}
+
+.navbar--logo {
+  display: block;
+  min-width: 200px;
+  max-width: 50%;
+}
+.navbar--logo img {
+  width: 100%;
+}
+@media (max-width: 320px) {
+  .navbar--logo {
+    min-width: 100px;
+    max-width: 50%;
+  }
+}
+
+.navbar--home {
+  padding: 1rem 2.5rem 1rem 1rem;
+  display: block;
+  text-decoration: none;
+  background-color: #ffb703;
+  color: #023047;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 25px;
+  position: relative;
+}
+.navbar--home span {
+  border: 3px solid white;
+  padding: 0.8rem;
+  position: absolute;
+  background-color: #023047;
+  border-radius: 50%;
+  color: #f0eff4;
+  top: 2px;
+  right: -15px;
+}
+.navbar--home:hover {
+  background-color: #023047;
+  color: #ffb703;
+  transition: 0.3s ease-in-out;
+}
+.navbar--home:hover span {
+  transition: 0.3s ease-in-out;
+  background-color: #f0eff4;
+  color: #023047;
+}
+@media (max-width: 320px) {
+  .navbar--home {
+    font-size: 1rem;
+  }
+  .navbar--home span {
+    border: 3px solid white;
+    padding: 0.6rem;
+    top: 2px;
+    right: -10px;
+  }
+}
+
+.hero--blog {
+  height: 80vh;
+  width: 100%;
+  background: url("../../../assets/image/bg/bg01.jpg") #110503 center center
+    fixed;
+  background-size: cover;
+  padding-top: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero--blog h2 {
+  position: relative;
+  color: #f0eff4;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+.hero--blog h2::after {
+  content: " ";
+  background-color: #ffb703;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 65%;
+  height: 4px;
+}
+
+.articles {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f0eff4;
+  border-radius: 25px;
+}
+
+.article {
+  margin: 1rem 0.5rem;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px 1px rgba(97, 97, 97, 0.29);
+}
+
+.article--media-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.article--image {
+  height: 250px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.article--image .article--image-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.article--image .article--image-img:hover {
+  object-fit: cover;
+  transform: scale(1.2);
+  transition: all 1s ease-in-out;
+}
+
+.article--avatar {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #fff;
+  position: absolute;
+  border-radius: 50%;
+  bottom: -10%;
+  left: 10%;
+}
+.article--avatar img {
+  border-radius: 50%;
+}
+
+.article--autor {
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin-top: 1rem;
+  color: #023047;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.article--autor i {
+  color: #219ebc;
+  padding: 0 0.2rem;
+}
+.article--autor p {
+  padding-right: 1rem;
+  font-weight: 800;
+}
+
+.article--detalle {
+  padding: 0 1.5rem;
+}
+.article--detalle h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.article--detalle p {
+  font-weight: 300;
+  line-height: 1.4rem;
+  padding-bottom: 0.5rem;
+}
+.article--detalle a {
+  color: #ffb703;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: 1.5rem;
+  display: inline-block;
+}
+.article--detalle a i {
+  position: relative;
+  top: 1px;
+  left: 10px;
+}
+.article--detalle a:hover {
+  color: #023047;
+  transition: 1s all ease-in-out;
+}
+
+.pagination {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 0rem 2rem 0rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.pagination a {
+  margin-right: 0.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #023047;
+}
+.pagination a:hover {
+  background-color: #023047;
+  color: #f0eff4;
+}
+
+.footer {
+  background-color: #110503;
+  padding: 1rem;
+  color: #f0eff4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
+}
+.footer--info span {
+  color: #ffb703;
+}
+
+.footer--social {
+  font-size: 2rem;
+  text-align: center;
+}
+.footer--social a {
+  color: #f0eff4;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+.footer--social a :hover {
+  color: #ffb703;
+}
+
+@media (min-width: 768px) {
+  .footer--info {
+    width: 48%;
+  }
+}
+
+.contact {
+  background-color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.label {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #023047;
+  font-size: 1.2rem;
+}
+
+.contact--form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-input {
+  width: 45%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-textarea {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  padding-right: 2.6rem;
+  flex-direction: column;
+}
+
+.input--form {
+  border-radius: 45px;
+  padding: 1.2rem;
+  font-size: 1rem;
+  border: 0;
+  color: #023047;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: White;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.089);
+}
+.input--form:hover {
+  border: 1px solid #ffb703;
+}
+
+.content-button {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.content-button button {
+  padding: 1rem 4rem;
+  border-radius: 35px;
+  color: #ffb703;
+  background-color: #023047;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.content-button button:hover {
+  color: #023047;
+  background-color: #ffb703;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+  .content-input {
+    width: 95%;
+  }
+
+  .content-textarea {
+    padding-right: 0rem;
+  }
+}

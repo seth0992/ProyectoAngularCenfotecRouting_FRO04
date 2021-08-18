@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenugeneralComponent implements OnInit {
 
   
-  elementos:string[] = ["Inicio","Acerca","Servicios","Portafolio","Contáctenos"]
+  elementos:string[] = ["Inicio","Acerca","Servicios","Portafolio","Contáctenos", "Blog"]
   constructor() { }
   claseVisible:boolean = false
   ngOnInit(): void {

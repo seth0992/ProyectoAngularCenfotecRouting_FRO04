@@ -1,0 +1,64 @@
+<main>
+  <section class="hero--blog paddingHelper">
+    <h2>Blog Braseth</h2>
+  </section>
+
+  <form (submit)="agregarPost(nuevoPost, descPost)" class="contact--form">
+    <h1>Añadir comentarios</h1>
+    <div class="content-textarea">
+      <label for="message" class="label">Nombre del Proyecto</label>
+      <input class="input--form" type="text" #nuevoPost />
+    </div>
+    <div class="content-textarea">
+      <label for="message" class="label">Descripción</label>
+      <input class="input--form" type="text" #descPost />
+    </div>
+    <div class="content-button">
+      <button>Añadir Post</button>
+    </div>
+  </form>
+
+  <section class="articles paddingHelper">
+    <article class="article" *ngFor="let item of items; let i = index">
+      <div class="article--media-container">
+        <div class="article--image">
+          <img
+            class="article--image-img"
+            src="../../../assets/image/trabajos/1.jpg"
+            alt="Fotografiá de una laptop, que en pantalla contiene código de programación javascript"
+          />
+        </div>
+        <div class="article--avatar">
+          <img
+            src="../../../assets/image/avatar/avatar.png"
+            alt="Fotografiá de Jeremy, joven de cabello castaño y tez blanca, de aproximadamente 28 años"
+          />
+        </div>
+      </div>
+
+      <div class="article--autor">
+        <i class="fa fa-at"></i>
+        <p>Jeremy</p>
+        <i class="fa fa-tag"></i>
+        <p>React</p>
+      </div>
+
+      <div class="article--detalle">
+        <h2>{{ item.nombre }}</h2>
+        <p>
+          {{ item.desc }}
+        </p>
+        <a>
+          <i class="fa fa-close" (click)="eliminarElemento(i)">eliminar</i></a
+        >
+      </div>
+    </article>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <a href="#"><i class="fa fa-arrow-left"></i></a>
+      <a href="#">1</a>
+      <a href="#"><i class="fa fa-arrow-right"></i></a>
+    </div>
+  </section>
+</main>

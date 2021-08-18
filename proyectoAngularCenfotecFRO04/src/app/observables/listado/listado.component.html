@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="!items.length">
+      <td colspan="3">Sin resultados encontrados</td>
+    </tr>
+    <tr *ngFor="let item of items; let i = index">
+      <td>#{{ i }}</td>
+      <td>{{ item.nombre }}</td>
+      <td>
+        <button (click)="eliminarElemento(i)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="crearElemento('as')">Crear Elemento</button>
