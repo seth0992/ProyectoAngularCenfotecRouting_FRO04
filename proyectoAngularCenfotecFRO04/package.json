@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sme": "./node_modules/.bin/source-map-explorer"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "boxicons": "^2.0.9",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.6.0",
+    "source-map-explorer": "^2.5.2",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
